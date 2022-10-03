@@ -33,12 +33,11 @@ ul li:not(.download-btn)::before{
     position: absolute;
     width: 100%;
     height: 4px;
-    border-radius: 4px;
     background-color: #e300b6a4;
     bottom: -8px;
     transform-origin: right;
     transform: scaleX(0);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
 ul li:not(.download-btn):hover::before{
     transform-origin: left;
@@ -87,8 +86,49 @@ ul li:not(.download-btn):hover::before{
     overflow: hidden;
     border-top-right-radius: 20px;
 }
+.heading{
+    transform: scale(0);
+    transform: translateX(-100%);
+    animation: scroll-anim 0.8s ease-in-out forwards;
+}
+.sub-heading{
+    transform: scale(0);
+    transform: translateX(-100%);
+    animation: scroll-anim 0.8s ease-in forwards
+}
+.join-btn{
+    transform: scale(0);
+    transform: translateX(-100%);
+    animation: scroll-anim-btn 0.8s ease-in-out forwards
+}
+@keyframes scroll-anim-btn {
+    50%{
+        transform: scale(1);
+        transform: translateX(40%);
+    }
+    100%{
+        transform: scale(1);
+        transform: translateX(0%);
+    }
+}
+@keyframes scroll-anim {
+    100%{
+        transform: scale(1);
+        transform: translateX(0%);
+    }
+}
 .girl-img{
     position: absolute;
     right: 40px;
     bottom: 0px;
+    transform: translateY(100%);
+    animation: img-anim 1s ease-in-out forwards;
+}
+@keyframes img-anim{
+    50%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(0%)
+    }
 }
