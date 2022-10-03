@@ -11,6 +11,7 @@ section{
     width: 100%;
     position: relative;
     padding: 0px 10%;
+    overflow: hidden;
 }
 nav{
     padding: 10px 0;
@@ -56,7 +57,7 @@ ul li:not(.download-btn):hover::before{
     border-top-right-radius: 20px;
 }
 .content{
-    margin-top: 10%;
+    margin-top: 12%;
     max-width: 550px;
 }
 .content h1{
@@ -125,9 +126,6 @@ ul li:not(.download-btn):hover::before{
     animation: img-anim 1s ease-in-out forwards;
 }
 @keyframes img-anim{
-    50%{
-        transform: translateY(-10%);
-    }
     100%{
         transform: translateY(0%)
     }
