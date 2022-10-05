@@ -28,6 +28,7 @@ ul li {
     list-style: none;
     cursor: pointer;
     position: relative;
+    font-size: 17px;
 }
 ul li:not(.download-btn)::before{
     content: '';
@@ -38,7 +39,7 @@ ul li:not(.download-btn)::before{
     bottom: -8px;
     transform-origin: right;
     transform: scaleX(0);
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 ul li:not(.download-btn):hover::before{
     transform-origin: left;
@@ -72,7 +73,20 @@ ul li:not(.download-btn):hover::before{
     font-weight: 400;
     margin: 40px 0px;
 }
-.content div:nth-child(3){
+.heading{
+    transform: scale(0);
+    transform: translateX(-100%);
+    animation: scroll-anim 0.8s ease-in-out forwards;
+    background: linear-gradient(0deg, #c25e84, #70187a);
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sub-heading{
+    transform: scale(0);
+    transform: translateX(-100%);
+    animation: scroll-anim 0.8s ease-in forwards
+}
+.join-btn{
     color: white;
     font: 18px;
     display: inline-block;
@@ -81,26 +95,20 @@ ul li:not(.download-btn):hover::before{
     border-top-right-radius: 0px;
     background-image: linear-gradient(45deg, #df4881, #c430d7);
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-.content div:nth-child(3):hover{
-    overflow: hidden;
-    border-top-right-radius: 20px;
-}
-.heading{
-    transform: scale(0);
-    transform: translateX(-100%);
-    animation: scroll-anim 0.8s ease-in-out forwards;
-}
-.sub-heading{
-    transform: scale(0);
-    transform: translateX(-100%);
-    animation: scroll-anim 0.8s ease-in forwards
-}
-.join-btn{
+    transition: border-top-right-radius 0.5s ease-in-out;
     transform: scale(0);
     transform: translateX(-100%);
     animation: scroll-anim-btn 0.8s ease-in-out forwards
+}
+.join-btn:hover{
+    border-top-right-radius: 20px;
+}
+.girl-img{
+    position: absolute;
+    right: 40px;
+    bottom: 0px;
+    transform: translateY(100%);
+    animation: img-anim 1s ease-in-out forwards;
 }
 @keyframes scroll-anim-btn {
     50%{
@@ -117,13 +125,6 @@ ul li:not(.download-btn):hover::before{
         transform: scale(1);
         transform: translateX(0%);
     }
-}
-.girl-img{
-    position: absolute;
-    right: 40px;
-    bottom: 0px;
-    transform: translateY(100%);
-    animation: img-anim 1s ease-in-out forwards;
 }
 @keyframes img-anim{
     100%{
